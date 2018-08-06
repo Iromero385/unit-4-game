@@ -7,6 +7,7 @@ var numberOfWins = 0;
 var numberOfLosses = 0;
 var totalScore = 0;
 
+
 initializeNewGame();
 
 function initializeNewGame(){
@@ -15,10 +16,11 @@ function initializeNewGame(){
     blueColorValue = Math.floor(Math.random()*100 +1);
     greenColorValue = Math.floor(Math.random()*100 +1);
     yellowColorValue = Math.floor(Math.random()*100 +1);
-    randomNumber = Math.floor(Math.random()*1000 +1);
+    randomNumber = Math.floor(Math.random()*500 +50);
     totalScore = 0;
     $("#randNumber").text(randomNumber);
 }
+// may not be implemented just wanted to practice .empty, .css and .html
 function endGame(){
    $(".container").empty();
    $(".container").html("<h1>" + "GameOver"+"</h1>")
@@ -72,3 +74,4 @@ $(".crystalImage").on("click",function(event){
    statusOfGame();
    updateScreen();
 });
+
