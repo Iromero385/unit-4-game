@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crystal Collector Game</title>
+
+  <!-- Added link to the jQuery Library -->
+  
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">  
+
+
+</head>
+<body>
+
+  <div class="container">
+      <!--Title   -->
+    <div class=row>
+        <div class="col-md-12" style="background-color: orange">
+            <h1>Crystal Collector Game</h1>
+        </div>
+    </div>
+    <!-- Instructions for game -->
+    <div class="row">
+        <div class="col-md-12 instBlock">
+            <div class="jumbotron jumbotron-fluid" style="background-color: blanchedalmond; padding-top: 0;">
+                <div class="container">
+                    <h1 class="display-4">Instrutcitons</h1>
+                    <p class="lead">You will be given a random number at the start of the game.</p>
+                    <p class="lead">There are four crystals below. By clicking on a crystal you will add a pecific amount of points to your total score.</p>
+                    <p class="lead">You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+                    <p class="lead">The value of each crystal is hidden from you until you clik on it.</p>
+                    <p class="lead">Each time when the game starts, the game will change the values of each crystal.</p>
+                </div>
+              </div>
+         </div>
+    </div>
+    <!-- Random number, Wins and Loses -->
+    <div class="row">
+            <div class="col-md-8 instBlock" style="background-color: greenyellow;">
+                <div>
+                    <h3>Match the following Score:</h3>
+                </div>
+                <h2 id="randNumber" class=" varStyle" Style="text-align: center;">Random Number here</h2>
+            </div>
+            <div class="col-md-4 instBlock" style="background-color: teal;">
+                <div  class="varStyle"> <h3 id="numberOfWins">Wins: ---</h3></div>
+                <div class="varStyle"> <h3 id="numberOfLosses">Losses: ---</h3></div>
+            </div>
+    </div>
+    <!-- contains all images of crystals -->
+    <div class="row">
+        <div class="col-md-3">
+                <figure class="figure">
+                        <img src="assets/images/RED.png" data-color="red" class="figure-img img-fluid rounded crystalImage "  alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">Red Crystal.</figcaption>
+                </figure>
+        </div>
+        <div class="col-md-3">
+                <figure class="figure">
+                        <img src="assets/images/blue.png" data-color="blue" class="figure-img img-fluid rounded crystalImage" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">Blue Crystal.</figcaption>
+                </figure>
+        </div>
+        <div class="col-md-3"> 
+            <figure class="figure">
+                <img src="assets/images/green.png" data-color="green" class="figure-img img-fluid rounded crystalImage" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Green Crystal.</figcaption>
+            </figure>
+    </div>
+        <div class="col-md-3">
+                <figure class="figure">
+                        <img src="assets/images/yellow.png" data-color="yellow" class="figure-img img-fluid rounded crystalImage" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">Yellow Crystal.</figcaption>
+                </figure>
+        </div>
+           
+    </div>
+    <!-- contains Total Score. -->
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Your Total score is:</h2>
+            <h2 id="totalScore" style="text-align: center; font-weight: 100px;"></h2>
+
+        </div>
+        
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
+</body>
+</html>
