@@ -54,23 +54,26 @@ function updateScreen(){
     $("#totalScore").text(totalScore);
 
 }
+function scoring (crystalColor){
+    switch(crystalColor){
+        case "red":
+             totalScore= totalScore + redColorValue;
+             break;
+        case "blue":
+             totalScore= totalScore + blueColorValue;
+             break;
+        case "green":
+             totalScore= totalScore + greenColorValue;
+             break;
+        case "yellow":
+             totalScore= totalScore + yellowColorValue;
+             break;
+    }
+}
 $(".crystalImage").on("click",function(event){
     // storing the image that was clicked on
    var crystalColor = $(this).attr("data-color");
-   switch(crystalColor){
-       case "red":
-            totalScore= totalScore + redColorValue;
-            break;
-       case "blue":
-            totalScore= totalScore + blueColorValue;
-            break;
-       case "green":
-            totalScore= totalScore + greenColorValue;
-            break;
-       case "yellow":
-            totalScore= totalScore + yellowColorValue;
-            break;
-   }
+   scoring(crystalColor);
    statusOfGame();
    updateScreen();
 });
